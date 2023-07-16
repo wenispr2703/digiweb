@@ -1,0 +1,482 @@
+:root {
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "poppins", sans-serif;
+  --font-secondary: "Montserrat", sans-serif;
+}
+:root {
+  --color-default: #f9fcff;
+  --color-primary: rgb(118, 205, 194);
+  --color-secondary: rgb(89, 121, 158);
+  --color-tertiary: rgb(247, 156, 161);
+}
+
+body {
+  background-image: url(assets/img/bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--color-default);
+}
+h1 {
+  font-family: var(--font-primary);
+  color: var(--color-primary);
+  font-weight: bold;
+  text-align: center;
+  font-size: 40px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: bold;
+  z-index: 999;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-family: var(--font-primary);
+  color: var(--color-secondary);
+  font-size: 30px;
+  font-weight: bold;
+  z-index: 999;
+}
+p {
+  margin-top: 20px;
+  font-size: 18px;
+  color: var(--color-secondary);
+  font-weight: normal;
+}
+.p1 {
+  font-weight: bold;
+}
+.title {
+  color: var(--color-secondary);
+}
+.subtitle {
+  color: var(--color-primary);
+}
+.follow {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+/*--------------------------------------------------------------
+# Navbar
+--------------------------------------------------------------*/
+.navbar {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+}
+
+.navbar-brand {
+  margin-right: 0;
+}
+
+.logo-img {
+  width: 60px;
+  height: auto;
+}
+/*--------------------------------------------------------------
+# Home
+--------------------------------------------------------------*/
+#home {
+  position: relative;
+  min-height: 100vh;
+}
+
+#home .whoiam {
+  line-height: 1.2;
+  top: 90px;
+  font-size: 60px;
+  font-weight: bold;
+  margin-left: 80px;
+  position: relative;
+  z-index: 2;
+}
+
+#home .whoiam .first-line {
+  color: var(--color-secondary);
+  margin-top: 20px;
+}
+
+#home .whoiam .second-line {
+  color: var(--color-primary);
+  line-height: 1.2;
+  margin-top: 30px;
+}
+#home .button-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+#home .button1,
+.button2 {
+  font-family: var(--font-primary);
+  font-weight: bold;
+  padding: 10px 20px;
+  margin: 10px 0;
+  margin-right: 30px;
+  font-size: 17px;
+  border: none;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#home .button1 {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+#home .button2 {
+  text-decoration: none;
+  background-color: var(--color-tertiary);
+  color: var(--color-secondary);
+}
+
+#home .button1:hover,
+.button2:hover {
+  border: 1px solid var(--color-secondary);
+}
+
+#home .button2 span {
+  margin-right: 10px;
+}
+
+#home .button2 i {
+  font-size: 20px;
+}
+
+/*--------------------------------------------------------------
+# About
+--------------------------------------------------------------*/
+#about {
+  position: relative;
+  min-height: 100vh;
+}
+
+.about-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.about-left i {
+  color: var(--color-secondary);
+  top: 50px;
+  margin-right: 20px;
+  font-size: 30px;
+}
+#about h2 {
+  line-height: 4;
+  top: 90px;
+  position: relative;
+}
+
+#about .about-left p {
+  margin-top: 30px;
+  color: var(--color-secondary);
+  margin-bottom: 30px;
+}
+
+#about .about-right {
+  text-align: center;
+}
+
+.about-right img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+
+#portfolio {
+  position: relative;
+  min-height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+#portfolio h2 {
+  text-align: center;
+  line-height: 2.5;
+  margin-bottom: -40px;
+}
+
+#portfolio p {
+  font-size: 14px;
+  text-align: center;
+  font-family: var(--font-primary);
+  margin-bottom: 20px;
+}
+.card {
+  margin-bottom: 20px;
+  background-color: rgba(89, 121, 158, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover .caption {
+  height: 50%;
+}
+
+.card:hover .caption::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(89, 121, 158, 0.9) 0%, rgba(118, 205, 194, 0) 100%);
+  z-index: 1;
+}
+
+.card:hover img {
+  filter: blur(5px);
+}
+
+.caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  padding: 10px;
+  color: #fff;
+  z-index: 2;
+  transition: height 0.3s;
+  overflow: hidden;
+}
+
+.caption h3,
+.caption p,
+.caption h4 {
+  text-align: center;
+  margin: 0;
+  color: rgb(62, 59, 59);
+}
+
+.caption h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.caption p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.caption h4 {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#portfolio .card p {
+  font-family: var(--font-primary);
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.text-center {
+  text-align: center;
+  min-height: 80px;
+}
+.katalog .send-button {
+  top: -10px;
+  text-decoration: none;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+/*--------------------------------------------------------------
+# Contact
+--------------------------------------------------------------*/
+#contact {
+  position: relative;
+  text-align: center;
+  min-height: 100vh;
+}
+
+button[type="submit"] {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.send-button {
+  position: relative;
+}
+
+.send-button i {
+  position: absolute;
+  left: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+button[type="submit"]:hover {
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background-color: rgba(57, 62, 70, 0.1);
+}
+
+/*--------------------------------------------------------------
+# Footer
+--------------------------------------------------------------*/
+
+#footer .container ul {
+  margin-top: 5%;
+}
+.footer-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.footer-links li a {
+  color: var(--color-secondary);
+  margin: 0 25px;
+}
+
+.footer-links li span {
+  font-style: normal;
+  color: var(--color-secondary);
+  display: inline-block;
+  margin-left: 5px;
+}
+.social-media {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.social-media a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color-tertiary);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 5px;
+  margin-right: 10px;
+  color: var(--color-secondary);
+}
+
+.social-media a i {
+  font-size: 18px;
+}
+
+.container .terms {
+  color: var(--color-secondary);
+  font-size: 12px;
+  text-align: center;
+  margin: 0;
+  margin-top: 4%;
+  margin-bottom: 20px;
+}
+/*--------------------------------------------------------------
+# Mobile Mode
+--------------------------------------------------------------*/
+@media (max-width: 768px) {
+  body {
+    background-image: url(assets/img/bg1.svg);
+  }
+  .vertical-line {
+    left: 37.5%;
+    display: block;
+    height: 700px;
+  }
+
+  .navbar-name {
+    font-size: 16px;
+    margin-left: 0%;
+  }
+  .navbar-menu li {
+    font-size: 12px;
+    margin-right: 10px;
+  }
+
+  #home .button1,
+  .button2 {
+    margin-right: 10px;
+  }
+
+  #home .whoiam {
+    font-size: 40px;
+    margin-left: 5%;
+  }
+  #home .button1,
+  .button2 {
+    margin-right: 10px;
+  }
+
+  #home .whoiam {
+    font-size: 40px;
+    margin-left: 5%;
+  }
+  #about .col-md-6 {
+    height: 300px;
+  }
+  .about-left {
+    position: relative;
+    text-align: center;
+    top: -35%;
+  }
+
+  .about-right lottie-player {
+    max-width: 350px;
+    max-height: 350px;
+  }
+
+  #portfolio {
+    justify-content: flex-start;
+    margin-bottom: 50px;
+  }
+
+  .card {
+    margin-left: 8%;
+    margin-bottom: 20px;
+  }
+  #contact {
+    background-image: url("assets/svg/frame5.svg");
+    margin-bottom: 50px;
+  }
+  .footer-links {
+    margin-left: 8%;
+    font-size: 16px;
+  }
+  .container .terms {
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-right lottie-player {
+    max-width: 300px;
+    max-height: 300px;
+  }
+}
